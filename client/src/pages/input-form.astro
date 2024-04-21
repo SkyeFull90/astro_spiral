@@ -1,6 +1,9 @@
 ---
 /* 
-
+const response = await fetch('http://127.0.0.1:8000/api/get-items')
+const data = await response.json();
+console.log(data)
+const items = data.items[0];
 */
 ---
 <form action="#" method="post">
@@ -8,5 +11,19 @@
     <button type="submit">Submit</button>
 </form>
 <!--- 
-    
+    <items.map(item => {
+        return (
+            <div>
+                <h1>{item.name}</h1>
+                <p>{item.description}</p>
+            </div>
+        )
+    })
+--->
+<!--- 
+    <div>
+        <h1>Items</h1>
+        <h1>{items.name}</h1>
+        <p>{items.description}</p>
+    </div>
 --->
